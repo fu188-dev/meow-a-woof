@@ -1,0 +1,78 @@
+$themeColor1: #FDF4F3;
+$themeColor2: #F8D6DD;
+$themeColor3: #F7D3E4;
+$themeColor4: #F1B3CD;
+$themeColor5: #F0C2A8;
+
+$themeColorRgb1: rgb(253, 244, 243);
+$themeColorRgb2: rgb(248, 214, 221);
+$themeColorRgb3: rgb(247, 211, 228);
+$themeColorRgb4: rgb(241, 179, 205);
+$themeColorRgb5: rgb(240, 194, 168);
+
+
+$shadowColor1: 10px 21px 8px -10px #FDF4F3;
+$shadowColor2: 10px 21px 8px -10px #F8D6DD;
+$shadowColor3: 10px 21px 8px -10px #F7D3E4;
+$shadowColor4: 10px 21px 8px -10px #F1B3CD;
+$shadowColor5: 10px 21px 8px -10px #F0C2A8;
+$shadowColor6: 10px 10px 20px -11px #383838;
+
+$shadowHoverColor1: -10px -21px 8px -10px #FDF4F3;
+$shadowHoverColor2: -10px -21px 8px -10px #F8D6DD;
+$shadowHoverColor3: -10px -21px 8px -10px #F7D3E4;
+$shadowHoverColor4: -10px -21px 8px -10px #F1B3CD;
+$shadowHoverColor5: -10px -21px 8px -10px #F0C2A8;
+$shadowHoverColor6: -10px -10px 20px -11px #383838;
+
+$fontSize1: 12px;
+$fontSize2: 16px;
+$fontSize3: 22px;
+$fontSize4: 24px;
+$fontSize5: 26px;
+$fontSize6: 28px;
+$fontSize7: 30px;
+$fontSize8: 32px;
+
+$fontColor1: #393944;
+$fontColor2: #6E7191;
+
+@mixin flex {
+    display: flex;
+}
+@mixin flex-alm-center {
+    @include flex;
+    align-items: center;
+}
+@mixin flex-y-alm-center {
+    @include flex-alm-center;
+    flex-direction: column;
+}
+@mixin flex-x-between-center {
+    @include flex-alm-center;
+    justify-content: space-between;
+}
+@mixin flex-x-center-center {
+    @include flex-alm-center;
+    justify-content: center;
+}
+@mixin flex-x-around-center {
+    @include flex-alm-center;
+    justify-content: space-around;
+}
+@mixin flex-x-around-center {
+    @include flex-alm-center;
+    justify-content: space-around;
+}
+@mixin flex-y-between-center {
+    @include flex-y-alm-center;
+    justify-content: space-between;
+}
+@mixin flex-y-center-center {
+    @include flex-y-alm-center;
+    justify-content: center;
+}
+@mixin flex-y-around-center {
+    @include flex-y-alm-center;
+    justify-content: space-around;
+}
