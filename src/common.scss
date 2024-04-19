@@ -3,6 +3,7 @@ $themeColor2: #F8D6DD;
 $themeColor3: #F7D3E4;
 $themeColor4: #F1B3CD;
 $themeColor5: #F0C2A8;
+$themeColor6: #FFFFFF;
 
 $themeColorRgb1: rgb(253, 244, 243);
 $themeColorRgb2: rgb(248, 214, 221);
@@ -17,6 +18,7 @@ $shadowColor3: 10px 21px 8px -10px #F7D3E4;
 $shadowColor4: 10px 21px 8px -10px #F1B3CD;
 $shadowColor5: 10px 21px 8px -10px #F0C2A8;
 $shadowColor6: 10px 10px 20px -11px #383838;
+$shadowColor7: 0 30px 30px -25px rgba(65,51,183,0.25);
 
 $shadowHoverColor1: -10px -21px 8px -10px #FDF4F3;
 $shadowHoverColor2: -10px -21px 8px -10px #F8D6DD;
@@ -24,18 +26,23 @@ $shadowHoverColor3: -10px -21px 8px -10px #F7D3E4;
 $shadowHoverColor4: -10px -21px 8px -10px #F1B3CD;
 $shadowHoverColor5: -10px -21px 8px -10px #F0C2A8;
 $shadowHoverColor6: -10px -10px 20px -11px #383838;
+$shadowHoverColor7: 0 30px 30px -25px rgba(65,51,183,0.25);
 
 $fontSize1: 12px;
-$fontSize2: 16px;
-$fontSize3: 22px;
-$fontSize4: 24px;
-$fontSize5: 26px;
-$fontSize6: 28px;
-$fontSize7: 30px;
-$fontSize8: 32px;
+$fontSize2: 14px;
+$fontSize3: 16px;
+$fontSize4: 18px;
+$fontSize5: 20px;
+$fontSize6: 22px;
+$fontSize7: 24px;
+$fontSize8: 26px;
+$fontSize9: 28px;
+$fontSize10: 30px;
+$fontSize11: 32px;
 
 $fontColor1: #393944;
 $fontColor2: #6E7191;
+$fontColor3: #FFFFFF;
 
 @mixin flex {
     display: flex;
@@ -48,6 +55,10 @@ $fontColor2: #6E7191;
     @include flex-alm-center;
     flex-direction: column;
 }
+@mixin flex-y {
+    @include flex;
+    flex-direction: column;
+}
 @mixin flex-x-between-center {
     @include flex-alm-center;
     justify-content: space-between;
@@ -55,10 +66,6 @@ $fontColor2: #6E7191;
 @mixin flex-x-center-center {
     @include flex-alm-center;
     justify-content: center;
-}
-@mixin flex-x-around-center {
-    @include flex-alm-center;
-    justify-content: space-around;
 }
 @mixin flex-x-around-center {
     @include flex-alm-center;

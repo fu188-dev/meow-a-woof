@@ -1,5 +1,9 @@
-.a {
-  background-color: beige;
-  width: 100px;
-  height: 100px;
+@import "../common.scss";
+
+main {
+  @include flex-x-around-center;
+  flex-wrap: wrap;
+  .box {
+    margin-bottom: 20px;
+  }
 }

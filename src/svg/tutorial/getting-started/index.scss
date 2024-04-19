@@ -1,0 +1,25 @@
+@import "../../../common.scss";
+
+dl {
+    padding: 0px 15%;
+    color: $fontColor1;
+    line-height: 2em;
+
+    dt {
+        font-size: $fontSize7;
+        margin-top: 20px;
+    }
+    dd {
+        font-size: $fontSize3;
+        ul {
+            padding-left: 4%;
+        }
+        ul li {
+            list-style-type: disc;
+        }
+    }
+    a {
+        color: $themeColor5;
+        text-decoration: underline;
+    }
+}

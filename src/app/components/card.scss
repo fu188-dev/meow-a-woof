@@ -1,22 +1,50 @@
 @import "../../common.scss";
 
 .box {
-    margin: 50px auto;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 350px;
+    padding: 10px;
     border-radius: 12px;
-    background-color: $themeColor4;
+    background-color: $themeColor6;
     box-shadow: $shadowColor6;
-    @include flex-y-center-center;
     cursor: pointer;
 
     &:hover {
         box-shadow: $shadowHoverColor6;
+        transform: translate(10px, 10px);
+    }
+    &:hover button {
+        box-shadow: none;
     }
 
-    h1 {
-        font-size: $fontSize8;
-        color: $fontColor1;
+    div {
+        @include flex-y;
+        height: 100%;
+        background-color: $themeColor2;
+        border-radius: 12px;
+        padding: 0px 20px;
+        
+
+        h1 {
+            padding-top: 20px;
+            font-size: $fontSize6;
+            color: $fontColor1;
+            font-weight: 500;
+            line-height: 2em;
+        }
+        p {
+            font-size: $fontSize2;
+            color: $fontColor2;
+        }
+        ul {
+            width: 80%;
+            margin: 30px auto;
+            @include flex-y;
+            font-size: $fontSize2;
+            color: $fontColor2;
+            line-height: 2em;
+
+        }
     }
     
 }
