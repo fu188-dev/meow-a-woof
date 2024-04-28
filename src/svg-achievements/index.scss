@@ -1,0 +1,20 @@
+@import "../common.scss";
+
+.svg-achievements-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    grid-auto-rows: minmax(200px, auto);
+
+    li {
+        @include flex-y-center-center;
+        box-shadow: 0 0 10px #F0C2A8;
+        background-color: $themeColor5;
+
+        h2, p {
+            font-size: $fontSize2;
+            margin: 10px;
+            color: $fontColor1;
+        }
+    }
+}

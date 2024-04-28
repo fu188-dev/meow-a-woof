@@ -1,33 +1,42 @@
 @import "../common.scss";
 
-section {
-    padding: 0px 15%;
-    color: $fontColor1;
-    line-height: 2em;
-    cursor: pointer;
+.svg-box {
+    @include flex;
+    justify-content: space-between;
+    padding: 0px 5%;
 
-    h1 {
-        font-size: $fontSize7;
-        margin-top: 20px;
-
-        &:hover {
+    section {
+        color: $fontColor1;
+        line-height: 2em;
+        cursor: pointer;
+        flex-shrink: 0;
+    
+        h1 {
+            font-size: $fontSize7;
+            margin-top: 20px;
+    
+            &:hover {
+                background-color: $themeColor2;
+            }
+        }
+        h2 {
+            font-size: $fontSize4;
+            text-indent: 2em;
+    
+            &:hover {
+                background-color: $themeColor2;
+            }        
+        }
+        h3 {
+            font-size: $fontSize2;
+            text-indent: 5em;
+    
+            &:hover {
+                background-color: $themeColor2;
+            }        
+        }
+        .choosed {
             background-color: $themeColor2;
         }
-    }
-    h2 {
-        font-size: $fontSize4;
-        text-indent: 2em;
-
-        &:hover {
-            background-color: $themeColor2;
-        }        
-    }
-    h3 {
-        font-size: $fontSize2;
-        text-indent: 5em;
-
-        &:hover {
-            background-color: $themeColor2;
-        }        
     }
 }

@@ -1,9 +1,8 @@
 @import "../common.scss";
 
 main {
-  @include flex-x-around-center;
-  flex-wrap: wrap;
-  .box {
-    margin-bottom: 20px;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  grid-auto-rows: minmax(200px, auto);
 }

@@ -2,8 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../app/index.js";
 
 import Svg from "../svg/index.js";
-import SvgIntroduction from "../svg/tutorial/introduction/index.js";
-import SvgGettingstarted from "../svg/tutorial/getting-started/index.js";
+import SvgAchievements from "../svg-achievements/index.js";
 
 const router = createBrowserRouter([
   {
@@ -24,16 +23,13 @@ const router = createBrowserRouter([
     // loader: teamLoader,
     children: [],
   },
+
   {
-    path: "/svg/introduction",
-    element: <SvgIntroduction />,
+    path: "/svg-achievements",
+    element: <SvgAchievements />,
     // loader: teamLoader,
-  },
-  {
-    path: "/svg/gettingstarted",
-    element: <SvgGettingstarted />,
-    // loader: teamLoader,
-  },
+    children: [],
+  },  
 ]);
 
 export default router;

@@ -1,0 +1,21 @@
+@import "../../common.scss";
+
+.code-box {
+    background-color: $themeColor7;
+    border-radius: 4px;
+    font-size: $fontSize3;
+    color: $fontColor3;
+    padding: 20px;
+    
+    div {
+        @include flex-x-between-center;
+        border-bottom: 1px solid $themeColor1;
+
+        .copy {
+            cursor: pointer;
+        }
+    }
+    pre {
+        text-wrap: wrap;
+    }
+}

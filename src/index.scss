@@ -1,5 +1,5 @@
 @import "./common.scss";
-body, p, h1, h2, h3, ul, section, main {
+body, p, h1, h2, h3, ul, ol, section, main {
   margin: 0;
   padding: 0;
   transition: all .3s;
@@ -18,7 +18,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $themeColor1;
+  background-color: $themeColor6;
 }
 a {
   text-decoration: none;

@@ -4,8 +4,19 @@ import "./layout.scss";
 function Layout({children}) {
     return (
         <Fragment>
-            <h1 className="logo">喵了个汪</h1>
-            {children}    
+            <nav className="logo">喵了个汪</nav>
+            <article className="content">
+                <div></div>
+                <section>
+                    <p>喵了个汪</p>
+                    <p>喵了个汪</p>
+                    <p>喵了个汪</p>
+                </section>
+                <section>{children}</section>
+                <div></div>
+            </article>
+            
+              
         </Fragment>
     );
 }
