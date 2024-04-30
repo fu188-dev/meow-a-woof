@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
 import "./index.scss";
+import { hover } from "@testing-library/user-event/dist/hover";
 
 function SvgAchievements() {
 
@@ -120,6 +121,139 @@ function SvgAchievements() {
           <h2>路径</h2>
           <p>曲线命令--弧形</p>
         </li>
+        <li>
+          <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="80" fillOpacity={0} stroke="#393944"strokeDasharray="5,10,5" id="MyRect"></circle>
+            <circle cx="60" cy="70" r="16" fillOpacity={0} stroke="#FDF4F3"></circle>
+            <circle cx="140" cy="70" r="16" fill="#F8D6DD" stroke="#393944" strokeOpacity={0.5}></circle>
+            <path d="M 70 120 Q 100 160, 130 120" stroke="black" fill="transparent"/>
+          </svg>
+          <h2>填充和边框</h2>
+          <p>fill、strok、fill-opacity、stroke-opacity、stroke-dasharray</p>
+        </li>
+        <li>
+          <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="Gradient1">
+                <stop offset="5%" stopColor="white" />
+                <stop offset="95%" stopColor="blue" />
+              </linearGradient>
+              <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="5%" stopColor="red" />
+                <stop offset="95%" stopColor="orange" />
+              </linearGradient>
+
+              <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
+                <rect x="0" y="0" width="50" height="50" fill="skyblue" />
+                <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)" />
+                <circle
+                  cx="25"
+                  cy="25"
+                  r="20"
+                  fill="url(#Gradient1)"
+                  fillOpacity="0.5" />
+              </pattern>
+            </defs>
+            <rect
+              fill="url(#Pattern)"
+              stroke="black"
+              x="0"
+              y="0"
+              width="200"
+              height="200" />
+          </svg>
+          <h2>patterns(图形)</h2>
+        </li>
+        <li>
+          <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <text x="50" y="30" textAnchor="start" rotate="20, -20, 40, 90, 180, 120, 30, 80, -60, -90">
+              凳子齐
+              <tspan fontWeight="bold" fill="red">（start）</tspan>
+            </text>
+            <text x="50" y="60" textAnchor="end">凳子齐（end）</text>
+            <text x="50" y="90" textAnchor="middle">凳子齐（middle）</text>
+            <text x="50" y="120" textAnchor="inherit">凳子齐（inherit）</text>
+          </svg>
+          <h2>文本</h2>
+          <p>text-anchor、&lt;tspan&gt;&lt;/tspan&gt;</p>
+        </li>       
+        <li>
+          <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="100" height="100" transform="translate(60,40) rotate(20)"/>
+          </svg>
+          <h2>基础变形</h2>
+          <p>平移、旋转</p>
+        </li>         
+        <li>
+          <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="100" height="100"transform="skewX(20) skewY(20) scale(0.8)"/>
+          </svg>
+          <h2>基础变形</h2>
+          <p>斜切、缩放</p>
+        </li>
+        <li>
+          <svg width={200}
+            height={200} xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <svg width="100" height="100" viewBox="0 0 50 50">
+              <rect width="50" height="50" />
+            </svg>
+          </svg>
+          <h2>基础变形</h2>
+          <p>SVG 嵌在 SVG 内部</p>
+        </li>
+        <li>
+          <svg
+            width={200}
+            height={200}
+            version="1.1">
+            <defs>
+              <clipPath id="cut-off-bottom">
+                <rect x="0" y="0" width="100" height="100" />
+              </clipPath>
+            </defs>
+            <circle cx="100" cy="100" r="100" clipPath="url(#cut-off-bottom)"/>
+          </svg>
+          <h2>剪切</h2>
+        </li>
+        <li>
+          <svg
+            version="1.1" width="200" height="200">
+            <defs>
+              <linearGradient id="Gradient">
+                <stop offset="0" stop-color="white" stop-opacity="0" />
+                <stop offset="1" stop-color="white" stop-opacity="1" />
+              </linearGradient>
+              <mask id="Mask">
+                <rect x="0" y="0" width="200" height="200" fill="url(#Gradient)" />
+              </mask>
+            </defs>
+
+            <rect x="0" y="0" width="200" height="200" fill="green" />
+            <rect x="0" y="0" width="200" height="200" fill="red" mask="url(#Mask)" />
+          </svg>
+          <h2>遮罩</h2>
+        </li>
+        <li>
+          <svg
+            width="200"
+            height="200"
+            version="1.1">
+            <rect x="0" y="0" width="200" height="200" fill="blue" />
+            <circle
+              cx="100"
+              cy="100"
+              r="50"
+              stroke="yellow"
+              stroke-width="40"
+              stroke-opacity=".5"
+              fill="red" />
+          </svg>
+          <h2>透明度</h2>
+        </li>
+
+
+
+
       </ul>
     </Fragment>
   );
