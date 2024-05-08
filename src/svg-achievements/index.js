@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import "./index.scss";
 import { hover } from "@testing-library/user-event/dist/hover";
+import svgImg from "../images/three.png";
 
 function SvgAchievements() {
 
@@ -250,10 +251,287 @@ function SvgAchievements() {
           </svg>
           <h2>透明度</h2>
         </li>
+        <li>
+          <svg
+            width="200"
+            height="200"
+            version="1.1">
+            <rect x="0" y="0" width="200" height="200" fill="blue" />
+            <image href={svgImg} x="0" y="0" height="200px" width="200px"/>
+            
+          </svg>
+          <h2>svg image 元素</h2>
+        </li>
+        <li>
+          <svg
+            width="200"
+            height="200"
+            viewBox="0 0 10 10"
+            version="1.1">
+            <rect width="10" height="10">
+              <animate
+                attributeName="rx"
+                values="0;5;0"
+                dur="5s"
+                repeatCount="indefinite" />
+            </rect>
+          </svg>
+          <h2>animate</h2>
+        </li>
+        <li>
+          <svg
+            width="120"
+            height="120"
+            viewBox="0 0 120 120"
+            version="1.1">
+            <rect x="10" y="35" height="15" width="0">
+              <animate
+                attributeType="XML"
+                attributeName="width"
+                to="100"
+                begin="0s"
+                dur="8s"
+                fill="freeze" />
+            </rect>
 
+            <rect x="35" y="60" height="15" width="0">
+              <animate
+                attributeType="XML"
+                attributeName="width"
+                to="75"
+                begin="2s"
+                dur="6s"
+                fill="freeze" />
+            </rect>
 
+            <rect x="60" y="85" height="15" width="0">
+              <animate
+                attributeType="XML"
+                attributeName="width"
+                to="50"
+                begin="4s"
+                dur="4s"
+                fill="freeze" />
+            </rect>
 
+            <text x="10" y="20" text-anchor="middle">0s</text>
+            <line x1="10" y1="25" x2="10" y2="105" stroke="grey" stroke-width=".5" />
+            <text x="35" y="20" text-anchor="middle">2s</text>
+            <line x1="35" y1="25" x2="35" y2="105" stroke="grey" stroke-width=".5" />
+            <text x="60" y="20" text-anchor="middle">4s</text>
+            <line x1="60" y1="25" x2="60" y2="105" stroke="grey" stroke-width=".5" />
+            <text x="85" y="20" text-anchor="middle">6s</text>
+            <line x1="85" y1="25" x2="85" y2="105" stroke="grey" stroke-width=".5" />
+            <text x="110" y="20" text-anchor="middle">8s</text>
+            <line x1="110" y1="25" x2="110" y2="105" stroke="grey" stroke-width=".5" />
 
+            <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+            <line x1="10" y1="105" x2="110" y2="105" stroke="grey" stroke-width=".5" />
+          </svg>
+          <h2>animate</h2>
+          <p>begin（Offset）</p>
+        </li>
+        <li>
+          <svg
+            width="120"
+            height="120"
+            viewBox="0 0 120 120"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1">
+            <rect x="10" y="35" height="15" width="0">
+              <animate
+                attributeType="XML"
+                attributeName="width"
+                to="50"
+                id="first"
+                begin="0s;third.end"
+                dur="4s" />
+            </rect>
+
+            <rect x="60" y="60" height="15" width="0">
+              <animate
+                attributeType="XML"
+                attributeName="width"
+                to="25"
+                id="second"
+                begin="first.end"
+                dur="2s" />
+            </rect>
+
+            <rect x="85" y="85" height="15" width="0">
+              <animate
+                attributeType="XML"
+                attributeName="width"
+                to="25"
+                id="third"
+                begin="second.end"
+                dur="2s" />
+            </rect>
+
+            <text x="10" y="20" text-anchor="middle">0s</text>
+            <line x1="10" y1="25" x2="10" y2="105" stroke="grey" stroke-width=".5" />
+            <text x="35" y="20" text-anchor="middle">2s</text>
+            <line x1="35" y1="25" x2="35" y2="105" stroke="grey" stroke-width=".5" />
+            <text x="60" y="20" text-anchor="middle">4s</text>
+            <line x1="60" y1="25" x2="60" y2="105" stroke="grey" stroke-width=".5" />
+            <text x="85" y="20" text-anchor="middle">6s</text>
+            <line x1="85" y1="25" x2="85" y2="105" stroke="grey" stroke-width=".5" />
+            <text x="110" y="20" text-anchor="middle">8s</text>
+            <line x1="110" y1="25" x2="110" y2="105" stroke="grey" stroke-width=".5" />
+
+            <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+            <line x1="10" y1="105" x2="110" y2="105" stroke="grey" stroke-width=".5" />
+          </svg>
+
+          <h2>animate</h2>
+          <p>begin（Syncbase）</p>
+        </li>
+        <li>
+          <svg
+            width="120"
+            height="120"
+            viewBox="0 0 120 120"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1">
+            <rect x="10" y="35" height="15" width="0">
+              <animate
+                attributeType="XML"
+                attributeName="width"
+                from="0"
+                to="100"
+                begin="startButton.click"
+                dur="8s"
+                fill="freeze" />
+            </rect>
+
+            <rect
+              id="startButton"
+              style={{cursor: "pointer"}}
+              x="19.5"
+              y="62.5"
+              rx="5"
+              height="25"
+              width="80"
+              fill="#EFEFEF"
+              stroke="black"
+              stroke-width="1" />
+
+            <text x="60" y="80" text-anchor="middle" style={{pointerEvents: "none"}}>
+              Click me.
+            </text>
+
+            <text x="10" y="20" text-anchor="middle">0s</text>
+            <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
+            <text x="35" y="20" text-anchor="middle">2s</text>
+            <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
+            <text x="60" y="20" text-anchor="middle">4s</text>
+            <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
+            <text x="85" y="20" text-anchor="middle">6s</text>
+            <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
+            <text x="110" y="20" text-anchor="middle">8s</text>
+            <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+
+            <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+            <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+          </svg>
+          <h2>animate</h2>
+          <p>begin（Event）</p>
+        </li>
+        <li>
+          <svg
+            width="120"
+            height="120"
+            viewBox="0 0 120 120"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1">
+            <rect x="10" y="35" height="15" width="0">
+              <animate
+                attributeType="XML"
+                attributeName="width"
+                from="0"
+                to="100"
+                id="myLoop"
+                begin="0s;myLoop.end"
+                dur="4s"
+                repeatCount="3" />
+
+              <set
+                attributeType="CSS"
+                attributeName="fill"
+                to="green"
+                begin="myLoop.begin" />
+
+              <set
+                attributeType="CSS"
+                attributeName="fill"
+                to="gold"
+                begin="myLoop.repeat(1)" />
+
+              <set
+                attributeType="CSS"
+                attributeName="fill"
+                to="red"
+                begin="myLoop.repeat(2)" />
+            </rect>
+
+            <text x="10" y="20" text-anchor="middle">0s</text>
+            <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
+            <text x="35" y="20" text-anchor="middle">1s</text>
+            <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
+            <text x="60" y="20" text-anchor="middle">2s</text>
+            <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
+            <text x="85" y="20" text-anchor="middle">3s</text>
+            <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
+            <text x="110" y="20" text-anchor="middle">4s</text>
+            <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+
+            <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+            <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+          </svg>
+          <h2>animate</h2>
+          <p>begin（Repeat）</p>
+        </li>
+        <li>
+          <svg
+            width="120"
+            height="120"
+            viewBox="0 0 120 120"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1">
+            <rect x="10" y="35" height="15" width="0">
+              <animate
+                attributeType="XML"
+                attributeName="width"
+                from="0"
+                to="100"
+                begin="accessKey(s)"
+                dur="8s"
+                fill="red" />
+            </rect>
+
+            <text x="60" y="80" text-anchor="middle" style={{pointerEvents: "none"}}>
+              Hit the "s" key
+            </text>
+
+            <text x="10" y="20" text-anchor="middle">0s</text>
+            <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
+            <text x="35" y="20" text-anchor="middle">2s</text>
+            <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
+            <text x="60" y="20" text-anchor="middle">4s</text>
+            <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
+            <text x="85" y="20" text-anchor="middle">6s</text>
+            <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
+            <text x="110" y="20" text-anchor="middle">8s</text>
+            <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+
+            <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+            <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+          </svg>
+
+          <h2>animate</h2>
+          <p>begin（Accesskey）</p>
+          <p>按下 s 键</p>
+        </li>
       </ul>
     </Fragment>
   );
